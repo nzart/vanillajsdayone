@@ -1,0 +1,19 @@
+body {
+    margin: 0 auto;
+    background-color:bisque;
+}
+
+.display {
+    display: flex;
+    height: 100vh;
+    background-color:aqua;
+}
+
+#bbox {
+    width: 12em;
+    height: 12em;
+    position: relative;
+    border-radius: 12em;
+    background-color: #afafaf;
+    transition: all 0.7s ease;
+}

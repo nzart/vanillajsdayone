@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="outside/normalize.css">     
+        <link rel="stylesheet" type="text/javascript" href="outside/modernizr.js">
+        
+        <link rel="stylesheet" type="text/css" href="style.css">
+        
+            
+        <title>Day One</title>
+    
+    </head>
+    
+    <body>
+        
+        <div class="display">
+            <div id="bbox"></div>
+        </div>
+        
+    </body>
+    
+    
+    <script>
+        
+        
+        
+        function transformBoxes(e) {
+            const bigbox = document.getElementById('bbox').style;
+            
+            const min = 50;
+            
+            const width = document.querySelector('.display').getBoundingClientRect().right;
+            const height = document.querySelector('.display').getBoundingClientRect().bottom;
+            
+            const rangeRover = Math.floor(Math.random() * (width - min + 1)) + min;
+            const landRover = Math.floor(Math.random() * (height - min + 1)) + min;
+            
+            console.log(rangeRover);
+            
+            bigbox.left = rangeRover + 'px';
+            bigbox.top = landRover + 'px';
+        }
+        
+        
+        window.addEventListener('keydown', transformBoxes);
+    </script>
+</html>
